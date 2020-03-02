@@ -113,7 +113,7 @@ header
 {
 	transform: rotate(360deg);
 	animation-name: loop-around;
-	animation-duration: 0.01s;
+	animation-duration: 0s;
 	animation-fill-mode: forwards;
 	animation-iteration-count: 1;
 	animation-delay: 1s;
@@ -276,7 +276,7 @@ nav a:hover::after
 
 #more-button
 {
-	transform: translateX(calc(100vw - 524px));
+	transform: translateX(calc(100vw - 540px));
 	margin: 0;
 	place-self: center;
 	z-index: 99;
