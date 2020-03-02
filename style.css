@@ -379,7 +379,7 @@ nav a:hover::after
 		grid-template-rows: auto auto 0px;
 		grid-column-gap: 10px;
 		overflow: hidden;
-		margin: -20px 25px 0 25px;
+		margin: -40px 25px 0 25px;
 	}
 
 	#recent-arrow
