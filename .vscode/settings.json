@@ -1,0 +1,24 @@
+{
+	"editor.formatOnSave": false,
+	"css.validate": false,
+	"less.validate": false,
+	"scss.validate": false,
+	"eslint.validate": ["vue", "javascript"],
+	"eslint.packageManager": "npm",
+	"stylelint.enable": true,
+	"stylelint.validate": ["vue", "css"],
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		"source.fixAll.stylelint": true
+	},
+	"files.exclude": {
+		"**/.git": true,
+		".gitignore": true,
+		"**/.DS_Store": true,
+		"package-lock.json": true,
+		"node_modules": true,
+		"dist": true,
+		".eslintrc": true,
+		"astro.config.mjs": true
+	}
+}
