@@ -1,0 +1,17 @@
+{
+	"name": "golden-boy-productions",
+	"version": "0.0.2",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev --port 3001",
+		"build": "astro build && touch dist/.nojekyll",
+		"lint": "eslint .",
+		"fix": "eslint . --fix"
+	},
+	"dependencies": {
+		"astro": "0.22.17"
+	},
+	"devDependencies": {
+		"eslint-config-goodbyte-styleguide": "^0.0.7"
+	}
+}
