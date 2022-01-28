@@ -1,4 +1,4 @@
 export default ({
-	renderers: [ '@astrojs/renderer-vue' ],
+	renderers: [],
 	// buildOptions: { site: 'https://goldenboyproductions.ca' },
 })

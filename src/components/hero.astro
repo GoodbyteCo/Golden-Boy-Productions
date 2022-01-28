@@ -1,0 +1,109 @@
+<div class="video-container">
+	<video 
+		loop
+		autoplay
+		muted
+		src="/hero.mp4"
+		width="100%"
+		alt=""
+	/>
+</div>
+
+<div class="floating-box">
+	<h6>Watch:</h6>
+	<p>Two and a Egg Roll Man</p>
+	<a href="https://www.youtube.com/watch?v=hlgxJE9St6M" class="cta">
+		Watch film on Youtube
+	</a>
+</div>
+
+<div class="sideways-arrow">
+	<p>Scroll for more</p>
+	<svg role="presentation" height="35" viewBox="0 0 152 35" width="152" xmlns="http://www.w3.org/2000/svg">
+		<g fill="none" stroke="var(--black)" stroke-width="2">
+			<path d="m0 0v148.75" transform="matrix(0 -1 1 0 0 17.414)"/>
+			<g stroke-linecap="square">
+				<path d="m134 1.414 16 16"/>
+				<path d="m134 33.414 16-16"/>
+			</g>
+		</g>
+	</svg>
+</div>
+
+<style>
+	.video-container
+	{
+		width: calc(100vw - calc(24vw + 36px));
+		margin: 0 12vw;
+		padding: 0 18px;
+	}
+
+	video
+	{
+		width: 100%;
+		/* "color correction" */
+		background: rgba(0, 0, 0, 0.75);
+		filter: brightness(85%) contrast(85%);
+	}
+
+	.floating-box
+	{
+		background: var(--white);
+		padding: 20px 30px;
+		border: solid 2px var(--black);
+		
+		width: 500px;
+		transform: translateY(-112px);
+		margin-left: 40px;
+	}
+
+	.floating-box p
+	{
+		font-size: 2.4rem;
+	}
+
+	.floating-box a
+	{
+		margin-top: 30px;
+	}
+
+	.sideways-arrow
+	{
+		position: absolute;
+		top: 38vw;
+		right: calc(-180px + 12vw);
+		user-select: none;
+		transform: rotate(90deg);
+	}
+
+	.sideways-arrow p
+	{
+		display: inline-block;
+		margin-right: 10px;
+		transform: translateY(-13px);
+	}
+
+	@media screen and (max-width: 760px)
+	{
+		.video-container
+		{
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		.floating-box
+		{
+			padding: 20px 25px;
+			width: calc(100% - 50px);
+			transform: translateY(-80px);
+			margin: 0 auto;
+			box-sizing: border-box;
+		}
+
+		.sideways-arrow
+		{
+			display: none;
+		}
+	}
+</style>
