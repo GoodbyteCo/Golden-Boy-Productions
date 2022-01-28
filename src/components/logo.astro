@@ -1,0 +1,41 @@
+<a href="/">
+	<!-- TODO: use avif + picture -->
+	<img src="icon.png" alt="Golden Boy logo"/>
+</a>
+
+<style>
+	img
+	{
+		padding: 15px;
+		width: 210px;
+		height: 210px;
+		border-radius: 100%;
+	}
+
+	a:focus
+	{
+		outline: none;
+	}
+
+
+	a:focus img
+	{
+		box-shadow: 0 0 0 2px var(--black);
+	}
+
+	@media screen and (max-width: 760px)
+	{
+		a
+		{
+			display: block;
+			text-align: center;
+		}
+
+		img
+		{
+			padding: 5px;
+			width: 70px;
+			height: 70px;
+		}
+	}
+</style>

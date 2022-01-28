@@ -1,0 +1,80 @@
+---
+import Logo from './logo.astro'
+---
+<header>
+	<Logo/>
+	<nav>
+		<a href="https://www.youtube.com/channel/UCGgobjNqH3ht_pvEBo2C23A/videos">Films</a>
+		<a href="./">About</a>
+		<a href="./">Contact</a>
+	</nav>
+</header>
+
+<style>
+	header
+	{
+		height: 70px;
+	}
+
+	nav
+	{
+		float: right;
+		display: flex;
+		flex-direction: row;
+		gap: 30px;
+		padding-top: 30px;
+
+		margin-right: 12vw;
+		padding-right: 18px;
+	}
+
+	a
+	{
+		display: inline-block;
+		font-size: 1.6rem;
+		transition: transform 0.2s ease;
+	}
+
+	a::after
+	{
+		content: "";
+		display: block;
+		background: var(--bright-yellow);
+		width: 0%;
+		height: 16px;
+		transform: translateY(-15px);
+		z-index: -1;
+		position: relative;
+		transition: all 0.2s ease;
+	}
+
+	a:hover, a:focus
+	{
+		transform: translateY(-5px);
+		outline: none;
+	}
+
+	a:hover::after, a:focus::after
+	{
+		width: 100%;
+		transform: translateY(-10px);
+	}
+
+	@media screen and (max-width: 760px)
+	{
+		header
+		{
+			height: auto;
+		}
+
+		nav
+		{
+			float: none;
+			margin: 0;
+			padding: 0;
+			
+  			justify-content: center;
+			padding-top: 10px;
+		}
+	}
+</style>

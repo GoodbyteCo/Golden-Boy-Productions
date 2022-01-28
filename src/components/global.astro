@@ -1,0 +1,95 @@
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#fff4bd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
+<style global>
+	@font-face
+	{
+		/* move to CDN */
+		font-family: 'Roboto Extremo';
+		src: url('./RobotoExtremo.ttf') format('truetype');
+		/*
+			url('assets/webfont-2.woff2') format('woff2'),
+			url('assets/webfont-2.woff') format('woff'),
+		*/
+	}
+
+	:root
+	{
+		--white: #fffcf0;
+		--pale-yellow: #fff4bd;
+		--bright-yellow: #fee305;
+		--gold: #db8906;
+		--black: #000000;
+
+		--background: var(--pale-yellow);
+		--foreground: var(--black);
+
+		--roboto-extremo: 'Roboto Extremo', serif;
+	}
+
+	html, body
+	{
+		background: var(--background);
+		color: var(--foreground);
+		font-family: var(--roboto-extremo);
+		font-size: 10px;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		margin: 0;
+		padding: 0;
+	}
+
+	a
+	{
+		text-decoration: none;
+		color: inherit;
+	}
+
+	a.cta
+	{
+		display: block;
+		font-size: 1.6rem;
+		line-height: 1em;
+		text-align: center;
+		user-select: none;
+		color: var(--white);
+		background: var(--black);
+		padding: 20px 10px;
+		transition: color 0.1s ease;
+	}
+
+	a.cta:hover, a.cta:focus
+	{
+		color: var(--bright-yellow);
+		transform: scale(1.02);
+		outline: none;
+	}
+
+	p
+	{
+		font-size: 1.4rem;
+	}
+
+	h2
+	{
+		font-weight: normal;
+		font-size: 3rem;
+		line-height: 1;
+		letter-spacing: 0;
+		margin: 0;
+	}
+	
+	h6
+	{
+		font-size: 1.6rem;
+		font-weight: normal;
+		line-height: 1;
+		letter-spacing: 0.06em;
+		margin: 10px 0;
+	}
+</style>
