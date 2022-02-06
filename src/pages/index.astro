@@ -2,19 +2,16 @@
 import Global from '../components/global.astro'
 import Header from '../components/header.astro'
 import Hero from '../components/hero.astro'
+import Footer from '../components/footer.astro'
+
+const films = Astro.fetchContent('../**.md');
+const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.released).valueOf()
 ---
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<Global/>
         <title>Golden Boy Productions</title>
-
-		<!-- 
-			slowly port styles into:
-			A) metadata.vue if global style
-			B) component style
-		-->
-        <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
 	</head>
 	<body>
 		<Header/>
@@ -24,6 +21,7 @@ import Hero from '../components/hero.astro'
 			<div>
 				<h2>Recent Productions</h2>
 				<p>Films and shorts</p>
+				<!-- Arrow -->
 				<svg height="57" viewBox="0 0 272 57" width="272" xmlns="http://www.w3.org/2000/svg">
 					<g fill="none" stroke="var(--black)" stroke-width="2">
 						<path d="m0 269.75v-269.75" transform="matrix(0 1 -1 0 269.75 38.75)"/>
@@ -33,14 +31,21 @@ import Hero from '../components/hero.astro'
 					</g>
 				</svg>
 			</div>
-			<a class="poster" href="https://www.youtube.com/watch?v=5MauLUE1MJ0"><img src="posters/finaldest.jpg"></a>
-			<a class="poster" href="https://www.youtube.com/watch?v=kdh1IjysFt0"><img src="posters/thechairs.jpg"></a>
-			<a class="poster" href="https://www.youtube.com/watch?v=Azs8rUOqAx4"><img src="posters/ghosts.jpg"></a>
-			<a class="poster" href="https://www.youtube.com/watch?v=UcnI_HobcE4"><img src="posters/flyingdisks.png"></a>
-			<a class="poster" href="https://www.youtube.com/watch?v=hlgxJE9St6M"><img src="posters/eggroll.jpg"></a>
+			{
+				films.sort(newestFirst).map((film) => (
+					<a class="poster" href={film.url}>
+						<img src={`posters/${film.img}.jpg`}>
+					</a>
+				))
+			}
 		</div>
-		<a href="https://www.youtube.com/channel/UCGgobjNqH3ht_pvEBo2C23A/videos" class="cta more">More</a>
-		<div style="height:200px"></div>
+		<a 
+			class="cta more"
+			href="https://www.youtube.com/channel/UCGgobjNqH3ht_pvEBo2C23A/videos" 
+		>
+			...More
+		</a>
+		<Footer/>
 	</body>
 </html>
 
