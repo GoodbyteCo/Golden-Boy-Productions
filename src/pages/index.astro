@@ -71,17 +71,19 @@ import Hero from '../components/hero.astro'
 		color: var(--black);
 		background: var(--white);
 		border: solid 2px var(--black);
-		width: 50%;
-		max-width: 500px;
-		margin: 30px auto;
 		transition: none;
+
+		min-width: 100px;
+		position: absolute;
+		right: 100px;
+		transform: translateY(-100px);
 	}
 
 	a.more.cta:hover, a.more.cta:focus
 	{
 		background: var(--black);
-		color: var(--white);
-		transform: none;
+		color: var(--bright-yellow);
+		transform: translateY(-100px);
 	}
 
 	.poster
@@ -157,6 +159,21 @@ import Hero from '../components/hero.astro'
 			bottom: 30px;
 			margin: 0;
 			line-height: 1.3;
+		}
+
+		a.more.cta
+		{
+			width: 50%;
+			max-width: 500px;
+			margin: 30px auto;
+			position: relative;
+			right: unset;
+			transform: none
+		}
+
+		a.more.cta:hover, a.more.cta:focus
+		{
+			transform: none
 		}
 	}
 

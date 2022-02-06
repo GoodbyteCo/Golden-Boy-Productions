@@ -26,22 +26,25 @@
 		--gold: #db8906;
 		--black: #000000;
 
-		--background: var(--pale-yellow);
-		--foreground: var(--black);
-
 		--roboto-extremo: 'Roboto Extremo', serif;
 	}
 
 	html, body
 	{
-		background: var(--background);
-		color: var(--foreground);
+		background: var(--pale-yellow);
+		color: var(--black);
 		font-family: var(--roboto-extremo);
 		font-size: 10px;
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
 		margin: 0;
 		padding: 0;
+	}
+
+	::selection
+	{
+		background: var(--bright-yellow);
+		color: var(--black);
 	}
 
 	a
