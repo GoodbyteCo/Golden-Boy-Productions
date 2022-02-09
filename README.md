@@ -1,8 +1,16 @@
 # Golden-Boy-Productions
 
-```
-npm run dev
+## Operational Notes
+
+Install dependencies:
+
+```bash
+npm install
 ```
 
-to run Astro site. Just open `demo.html` in the browser for the non-astro demo.
+Run locally:
+
+```bash
+npm run dev
+```
 
