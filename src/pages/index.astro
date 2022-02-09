@@ -94,7 +94,7 @@ const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.releas
 	.poster
 	{
 		position: relative;
-		transition: transform 0.1s ease-out;
+		transition: transform 0.15s ease-out;
 	}
 
 	.poster::before
@@ -108,7 +108,7 @@ const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.releas
 		width: 100%;
 		height: 100%;
 		background: var(--bright-yellow);
-		transition: transform 0.1s ease-out;
+		transition: transform 0.15s ease-out;
 	}
 
 	.poster:hover, .poster:focus
@@ -127,7 +127,7 @@ const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.releas
 		width: 100%;
 	}
 
-	@media screen and (max-width: 1000px)
+	@media screen and (max-width: 950px)
 	{
 		#recents
 		{
