@@ -1,4 +1,7 @@
 export default ({
 	renderers: [],
-	// buildOptions: { site: 'https://goldenboyproductions.ca' },
+	buildOptions: {
+		site: 'https://goldenboyproductions.ca',
+		sitemap: true,
+	},
 })
