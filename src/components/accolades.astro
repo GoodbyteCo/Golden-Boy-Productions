@@ -1,0 +1,51 @@
+---
+const { from } = Astro.props
+---
+
+<ul>
+	{from.map(accolade => <li>{accolade}</li>)}
+</ul>
+
+<style>
+	ul
+	{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+
+	li
+	{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		font-size: 1rem;
+		min-width: 100px;
+		max-width: 250px;
+		text-align: center;
+	}
+
+	li::before,
+	li::after
+	{
+		content: "";
+		display: inline-block;
+		background-image: url("/laurel.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 110px;
+		height: 70px;
+	}
+
+	li::after
+	{
+		transform: scaleX(-1);
+	}
+</style>
