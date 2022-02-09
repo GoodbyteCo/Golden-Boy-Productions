@@ -1,6 +1,9 @@
+---
+import Logo from '../components/logo.astro'
+---
 <footer>
 	<section class="logo">
-		<img src="icon.png">
+		<Logo/>
 		<p>Golden Boy Productions</p>
 	</section>
 	<section class="links">
@@ -11,10 +14,10 @@
 			<li><a href="/contact">Get In Touch</a></li>
 		</ul>
 		<ul>
-			<li><a href=".">Youtube</a></li>
-			<li><a href=".">Instagram</a></li>
-			<li><a href=".">Twitter</a></li>
-			<li><a href=".">Tiktok</a></li>
+			<li><a href="https://www.youtube.com/c/GoldenBoyProductions/about" target="_blank">Youtube</a></li>
+			<li><a href="https://www.instagram.com/GoldenBoyProds/" target="_blank">Instagram</a></li>
+			<li><a href="https://twitter.com/GoldenBoyProds" target="_blank">Twitter</a></li>
+			<li><a href="https://www.facebook.com/GoldenBoyProds" target="_blank">Facebook</a></li>
 		</ul>
 	</section>
 	<section class="legal">
@@ -26,6 +29,7 @@
 <style>
 	footer
 	{
+		/* border-top: 2px solid var(--black); */
 		margin-top: 100px;
 		padding: 60px;
 		display: flex;
@@ -43,10 +47,9 @@
 		flex-grow: 1;
 	}
 
-	section.logo img
+	section.logo :global(img)
 	{
 		width: 100px;
-		border-radius: 100%;
 	}
 
 	section.logo p
@@ -142,7 +145,7 @@
 			gap: 60px;
 		}
 
-		section.logo img
+		section.logo :global(img)
 		{
 			width: 80px;
 		}

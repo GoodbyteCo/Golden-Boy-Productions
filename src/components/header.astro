@@ -4,9 +4,9 @@ import Logo from './logo.astro'
 <header>
 	<Logo/>
 	<nav>
-		<a href="https://www.youtube.com/channel/UCGgobjNqH3ht_pvEBo2C23A/videos">Films</a>
-		<a href="./">About</a>
-		<a href="./">Contact</a>
+		<a href="/films">Films</a>
+		<a href="/about">About</a>
+		<a href="/contact">Contact</a>
 	</nav>
 </header>
 
@@ -60,6 +60,13 @@ import Logo from './logo.astro'
 		transform: translateY(-10px);
 	}
 
+	header :global(img)
+	{
+		padding: 15px;
+		width: 210px;
+		height: 210px;
+	}
+
 	@media screen and (min-width: 1440px)
 	{
 		nav
@@ -83,6 +90,19 @@ import Logo from './logo.astro'
 			
   			justify-content: center;
 			padding-top: 10px;
+		}
+
+		header :global(a)
+		{
+			display: block;
+			text-align: center;
+		}
+
+		header :global(img)
+		{
+			padding: 5px;
+			width: 70px;
+			height: 70px;
 		}
 	}
 </style>
