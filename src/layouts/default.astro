@@ -1,0 +1,59 @@
+---
+import Global from '../components/global.astro'
+import Header from '../components/header.astro'
+import Footer from '../components/footer.astro'
+
+const { title } = Astro.props
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<Global/>
+        <title>{title} | Golden Boy Productions</title>
+	</head>
+	<body>
+		<Header/>
+		<main>
+			<slot/>
+		</main>
+		<Footer/>
+	</body>
+</html>
+
+<style>
+	body
+	{
+		max-width: 1440px;
+	}
+
+	main
+	{
+		background: var(--white);
+		border: 2px solid var(--black);
+
+		box-sizing: border-box;
+		width: 76vw;
+		max-width: 1095px;
+		margin: auto;
+		padding: 10px 60px 30px;
+
+		position: relative;
+		z-index: 1;
+	}
+
+	:global(h1)
+	{
+		font-size: 4rem;
+		letter-spacing: -0.03em;
+	}
+
+	@media screen and (max-width: 760px)
+	{
+		main
+		{
+			width: auto;
+			margin: 10px 10px;
+			padding: 10px 30px;
+		}
+	}
+</style>
