@@ -1,0 +1,71 @@
+---
+import Logo from './logo.astro'
+---
+<header>
+	<Logo/>
+	<nav>
+		<a href="/films">Films</a>
+		<a href="/about">About</a>
+		<a href="/contact">Contact</a>
+	</nav>
+</header>
+
+<style>
+	header
+	{
+		width: 100%;
+		height: 70px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 0 30px;
+		box-sizing: border-box;
+	}
+
+	nav
+	{
+		display: flex;
+		flex-direction: row;
+		gap: 30px;
+		padding-top: 30px;
+	}
+
+	a
+	{
+		display: inline-block;
+		font-size: 1.6rem;
+		transition: transform 0.2s ease;
+	}
+
+	a::after
+	{
+		content: "";
+		display: block;
+		background: var(--bright-yellow);
+		width: 0%;
+		height: 16px;
+		transform: translateY(-15px);
+		z-index: -1;
+		position: relative;
+		transition: all 0.2s ease;
+	}
+
+	a:hover, a:focus
+	{
+		transform: translateY(-5px);
+		outline: none;
+	}
+
+	a:hover::after, a:focus::after
+	{
+		width: 100%;
+		transform: translateY(-10px);
+	}
+
+	header :global(img)
+	{
+		padding: 15px 0;
+		width: 50px;
+		height: 50px;
+	}
+</style>
