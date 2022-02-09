@@ -1,0 +1,57 @@
+---
+import Global from '../components/global.astro'
+import Header from '../components/small-header.astro'
+import Poster from '../components/poster.astro'
+import Footer from '../components/footer.astro'
+
+const features = Astro.fetchContent('./features/*.md');
+const shorts = Astro.fetchContent('./shorts/*.md');
+const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.released).valueOf()
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<Global/>
+        <title>Films | Golden Boy Productions</title>
+	</head>
+	<body>
+		<Header/>
+		<main>
+			<section>
+				<h2>Short Films</h2>
+				<div class="grid">
+				{
+					shorts.sort(newestFirst).map((film) => <Poster of={film}/>)
+				}
+				</div>
+			</section>
+		</main>
+		<Footer/>
+	</body>
+</html>
+
+<style>
+	body
+	{
+		max-width: 1440px;
+		margin: auto;
+	}
+
+	main
+	{
+		padding: 30px;
+	}
+
+	h2
+	{
+		font-size: 2rem;
+		margin: 1rem 0 2rem;
+	}
+
+	.grid
+	{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+		gap: 10px;
+	}
+</style>
