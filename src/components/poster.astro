@@ -1,0 +1,45 @@
+---
+const { of } = Astro.props
+const film = of
+---
+<a class="poster" href={film.url}>
+	<img src={`posters/${film.img}.jpg`}>
+</a>
+
+<style>
+	.poster
+	{
+		position: relative;
+		transition: transform 0.15s ease-out;
+	}
+
+	.poster::before
+	{
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: var(--bright-yellow);
+		transition: transform 0.15s ease-out;
+	}
+
+	.poster:hover, .poster:focus
+	{
+		transform: scale(0.95);
+		outline: none;
+	}
+
+	.poster:hover::before, .poster:focus::before
+	{
+		transform: rotate(-4deg) scale(1.05) translate(5px, 5px);
+	}
+
+	img
+	{
+		width: 100%;
+	}
+</style>
