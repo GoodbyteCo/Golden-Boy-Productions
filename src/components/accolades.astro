@@ -3,7 +3,7 @@ const { from } = Astro.props
 ---
 
 <ul>
-	{from.map(accolade => <li>{accolade}</li>)}
+	{from?.map(accolade => <li>{accolade}</li>)}
 </ul>
 
 <style>
