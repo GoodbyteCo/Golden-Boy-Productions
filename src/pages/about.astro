@@ -5,13 +5,51 @@ import { Markdown } from 'astro/components';
 <DefaultLayout title="About">
 	<Markdown>
 
-		# About Us
+		# You should know
 
-		To do. films full of funny jolkes for friendly folkes
+		David Vassos is a filmmaker from Toronto who makes films full of funny jolkes
+		for friendly folkes. Golden Boy Productions serves as a platform for his films,
+		some of which have been featured at festivals including the Kingston Canadian
+		Film Festival, Insomniac Film Festival, and Quarantine International Film
+		Festival.
 
 	</Markdown>
+	<img alt="Image of David Vassos holding a film camera over his sholder, pointed towards a mirror" src="/david-headshot.jpg"/>
 </DefaultLayout>
 
 <style>
+	p
+	{
+		width: 50%;
+	}
 
+	img
+	{
+		width: 40%;
+		max-width: 400px;
+		border: solid 2px var(--black);
+		display: block;
+
+		position: absolute;
+		right: 5%;
+		bottom: -60px;
+	}
+
+	@media screen and (max-width: 950px)
+	{
+		p
+		{
+			width: auto;
+		}
+
+		img
+		{
+			position: relative;
+			right: unset;
+			bottom: unset;
+			width: 70%;
+			margin: 0 auto -60px;
+			transform: translate(25%, 30px);
+		}
+	}
 </style>
