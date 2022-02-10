@@ -5,7 +5,8 @@ id: Hg3CfrG_t_c
 
 credits:
 - Directed, Shot, and Edited by David Vassos
-- Starring
+-
+- "Starring:"
 - Jacob Dey as Mîttelmårk Mütûmbo
 
 accolades:

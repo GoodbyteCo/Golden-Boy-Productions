@@ -6,7 +6,8 @@ id: 5MauLUE1MJ0
 credits:
 - Directed, Shot, and Edited by David Vassos
 - Written by Hamza Ali, Bennett Penner, Eric Rodomar, & David Vassos
-- Starring
+-
+- "Starring:"
 - Eric Rodomar as "Rory"
 - Bennett Penner as "Trevor"
 - and Hamza Ali as "Chester"
