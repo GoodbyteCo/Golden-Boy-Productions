@@ -2,8 +2,12 @@
 const { of } = Astro.props
 const film = of
 ---
-<a class="poster" href={film.url}>
-	<img src={`posters/${film.img}.jpg`}>
+<a class="poster" href={film.url} aria-label={film.title} title={film.title}>
+	<picture>
+		<source type="image/avif" srcset={`/posters/${film.img}.avif`}/>
+		<source type="image/webp" srcset={`/posters/${film.img}.webp`}/>
+		<img src={`/posters/${film.img}.jpg`} alt={`Poster for the film "${film.title}"`}/>
+	</picture>
 </a>
 
 <style>
