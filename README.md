@@ -8,9 +8,9 @@ Install dependencies:
 npm install
 ```
 
-Run locally:
-
-```bash
-npm run dev
-```
+| COMMAND       | DESCRIPTION                             |
+|:--------------|:----------------------------------------|
+| `npm run dev` | Run the site locally                    |
+| `npm run img` | Convert all JPG images to Avif and WebP |
+| `npm run fix` | Fix any linting errors                  |
 

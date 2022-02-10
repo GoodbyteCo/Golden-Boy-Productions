@@ -2,16 +2,25 @@
 	"name": "golden-boy-productions",
 	"version": "0.0.2",
 	"private": true,
-	"scripts": {
-		"dev": "astro dev --port 3001",
+	"scripts":
+	{
+		"dev": "astro dev",
 		"build": "astro build && touch dist/.nojekyll",
 		"lint": "eslint .",
-		"fix": "eslint . --fix"
+		"fix": "eslint . --fix",
+		"img": "npm run convert:avif && npm run convert:webp",
+		"convert:avif": "avif --input=public/*/*.jpg --speed=6 --quality=70 --overwrite",
+		"convert:webp": "imagemin public/posters/*.jpg --out-dir=public/posters --plugin.webp.method=1 --plugin.webp.quality=80 && imagemin public/assets/*.jpg --out-dir=public/assets --plugin.webp.method=1 --plugin.webp.quality=80"
 	},
-	"dependencies": {
-		"astro": "0.22.17"
+	"dependencies":
+	{
+		"astro": "0.22.20",
+		"avif": "^0.1.0",
+		"imagemin-cli": "^7.0.0",
+		"imagemin-webp": "^7.0.0"
 	},
-	"devDependencies": {
+	"devDependencies":
+	{
 		"eslint-config-goodbyte-styleguide": "^0.0.7"
 	}
 }
