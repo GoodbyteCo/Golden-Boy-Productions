@@ -1,6 +1,6 @@
 ---
 title: Final Destination
-released: 2021-01-01
+released: 2019-03-23
 id: 5MauLUE1MJ0
 
 credits:
@@ -16,7 +16,7 @@ credits:
 accolades:
 - Official Selection — Juvenis Festival 2019 (KFPL Youth Shorts)
 
-img: finaldest
+img: final-destination
 layout: ../../layouts/film-page.astro
 ---
 
