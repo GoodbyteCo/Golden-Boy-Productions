@@ -17,11 +17,6 @@ credits:
 - Sound Recording by Grant Polley
 - Glorp Check by Ross McIntyre
 
-
-
-accolades:
-- Official Selection — Juvenis Festival 2019 (KFPL Youth Shorts)
-
 img: hot-air
 layout: ../../layouts/film-page.astro
 ---

@@ -33,7 +33,7 @@ const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.releas
 				</svg>
 			</div>
 			{
-				films.sort(newestFirst).map((film) => <Poster of={film}/>)
+				films.sort(newestFirst).slice(0, 5).map((film) => <Poster of={film}/>)
 			}
 		</div>
 		<a class="cta more" href="/films">

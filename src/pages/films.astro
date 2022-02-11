@@ -4,7 +4,7 @@ import Header from '../components/small-header.astro'
 import Poster from '../components/poster.astro'
 import Footer from '../components/footer.astro'
 
-const features = Astro.fetchContent('./features/*.md');
+// const features = Astro.fetchContent('./features/*.md');
 const shorts = Astro.fetchContent('./shorts/*.md');
 const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.released).valueOf()
 ---
@@ -51,7 +51,7 @@ const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.releas
 	.grid
 	{
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 		gap: 10px;
 	}
 </style>
