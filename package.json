@@ -5,12 +5,12 @@
 	"scripts":
 	{
 		"dev": "astro dev",
-		"build": "astro build && touch dist/.nojekyll",
+		"build": "astro build",
 		"lint": "eslint .",
 		"fix": "eslint . --fix",
 		"img": "npm run convert:avif && npm run convert:webp",
-		"convert:avif": "avif --input=public/*/*.jpg --speed=6 --quality=70 --overwrite",
-		"convert:webp": "imagemin public/posters/*.jpg --out-dir=public/posters --plugin.webp.method=1 --plugin.webp.quality=80 && imagemin public/assets/*.jpg --out-dir=public/assets --plugin.webp.method=1 --plugin.webp.quality=80"
+		"convert:avif": "avif --input=public/posters/*.jpg --speed=6 --quality=70 --overwrite",
+		"convert:webp": "imagemin public/posters/*.jpg --out-dir=public/posters --plugin.webp.method=1 --plugin.webp.quality=80"
 	},
 	"dependencies":
 	{
