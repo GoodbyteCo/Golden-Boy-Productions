@@ -2,20 +2,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="preconnect" href="https://fonts.goodbyte.ca/" crossorigin>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="theme-color" content="#fff4bd" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 
 <style global>
-	@font-face
+	@font-face 
 	{
-		/* move to CDN */
-		font-family: 'Roboto Extremo';
-		src: url('/RobotoExtremo.ttf') format('truetype');
-		/*
-			url('assets/webfont-2.woff2') format('woff2'),
-			url('assets/webfont-2.woff') format('woff'),
-		*/
+		font-family: 'RobotoExtremo';
+		src: url('https://fonts.goodbyte.ca/roboto-extremo.woff2') format('woff2'),
+		     url('https://fonts.goodbyte.ca/roboto-extremo.woff')  format('woff'),
+		     url('https://fonts.goodbyte.ca/roboto-extremo.ttf')   format('truetype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
 	}
 
 	:root
@@ -26,7 +27,7 @@
 		--gold: #db8906;
 		--black: #000000;
 
-		--roboto-extremo: 'Roboto Extremo', serif;
+		--roboto-extremo: 'RobotoExtremo', -apple-system, BlinkMacSystemFont,, Roboto, sans-serif;
 	}
 
 	html, body
