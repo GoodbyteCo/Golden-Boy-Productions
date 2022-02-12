@@ -45,7 +45,7 @@ const { content } = Astro.props
 			<section class="credits">
 				<h2>Credits</h2>
 				<ul>
-					{content.credits.map(credit => (credit) ? <li>{credit}</li> : <hr/>)}
+					{content.credits.map(credit => (credit) ? (<li>{credit}</li>) : (<hr/>))}
 				</ul>
 			</section>
 			<section class="synopsis">
