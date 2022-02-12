@@ -19,8 +19,8 @@ const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.releas
 		<meta name="twitter:description" content="films full of funny jolkes for friendly folkes."/>
 		<meta property="og:type" content="website"/>
 		<meta name="twitter:card" content="summary_large_image"/>
-		<meta property="og:image" content={`https://goldenboyproductions.ca/assets/social.png`}/>
-		<meta name="twitter:image" content={`https://goldenboyproductions.ca/assets/social.png`}/>
+		<meta property="og:image" content="https://goldenboyproductions.ca/assets/social.png"/>
+		<meta name="twitter:image" content="https://goldenboyproductions.ca/assets/social.png"/>
 		<meta property="og:image:alt" content="Golden Boy Productions' logo, a hand-drawn cartoon character in a yellow circle"/>
 		<meta name="twitter:image:alt" content="Golden Boy Productions' logo, a hand-drawn cartoon character in a yellow circle"/>
 		<meta property="og:image:width" content="900"/>
@@ -82,6 +82,11 @@ const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.releas
 		gap: 10px;
 		overflow: hidden;
 		padding-right: 40px;
+	}
+
+	#recents p
+	{
+		font-size: 1.4rem;
 	}
 
 	a.more.cta
