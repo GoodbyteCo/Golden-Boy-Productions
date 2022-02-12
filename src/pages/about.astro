@@ -14,7 +14,14 @@ import { Markdown } from 'astro/components';
 		Bros., or running around in a big open field.
 
 	</Markdown>
-	<img alt="Image of David Vassos holding a film camera over his sholder, pointed towards a mirror" src="/assets/david-headshot.jpg"/>
+	<picture>
+		<source type="image/avif" srcset="/assets/david-headshot.avif"/>
+		<source type="image/webp" srcset="/assets/david-headshot.webp"/>
+		<img
+			src="/assets/david-headshot.jpg"
+			alt="Image of David Vassos holding a film camera over his sholder, pointed towards a mirror"
+		/>
+	</picture>
 </DefaultLayout>
 
 <style>
