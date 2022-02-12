@@ -11,6 +11,18 @@ const { content } = Astro.props
 	<head>
 		<Global/>
         <title>{content.title} | Golden Boy Productions</title>
+		<meta property="og:title" content={content.title}/>
+		<meta name="twitter:title" content={content.title}/>
+		<meta property="og:description" content="A film by Golden Boy Productions. Watch it now!"/>
+		<meta name="twitter:description" content="A film by Golden Boy Productions. Watch it now!"/>
+		<meta property="og:type" content="video.movie"/>
+		<meta name="twitter:card" content="summary"/>
+		<meta property="og:image" content={`https://goldenboyproductions.ca/posters/${content.img}.jpg`}/>
+		<meta name="twitter:image" content={`https://goldenboyproductions.ca/posters/${content.img}.jpg`}/>
+		<meta property="og:image:alt" content={`Poster for the film ${content.title}`}/>
+		<meta name="twitter:image:alt" content={`Poster for the film ${content.title}`}/>
+		<meta property="og:image:width" content="1080" />
+		<meta property="og:image:height" content="1620" />
 	</head>
 	<body>
 		<Header/>

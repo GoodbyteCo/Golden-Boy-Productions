@@ -13,6 +13,18 @@ const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.releas
 	<head>
 		<Global/>
         <title>Golden Boy Productions</title>
+		<meta property="og:title" content="Golden Boy Productions"/>
+		<meta name="twitter:title" content="Golden Boy Productions"/>
+		<meta property="og:description" content="films full of funny jolkes for friendly folkes."/>
+		<meta name="twitter:description" content="films full of funny jolkes for friendly folkes."/>
+		<meta property="og:type" content="website"/>
+		<meta name="twitter:card" content="summary_large_image"/>
+		<meta property="og:image" content={`https://goldenboyproductions.ca/assets/social.png`}/>
+		<meta name="twitter:image" content={`https://goldenboyproductions.ca/assets/social.png`}/>
+		<meta property="og:image:alt" content="Golden Boy Productions' logo, a hand-drawn cartoon character in a yellow circle"/>
+		<meta name="twitter:image:alt" content="Golden Boy Productions' logo, a hand-drawn cartoon character in a yellow circle"/>
+		<meta property="og:image:width" content="900"/>
+		<meta property="og:image:height" content="478"/>
 	</head>
 	<body>
 		<Header/>
