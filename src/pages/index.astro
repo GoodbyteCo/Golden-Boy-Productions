@@ -109,6 +109,11 @@ const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.releas
 		transform: translateY(-100px);
 	}
 
+	:global(p)
+	{
+		font-size: 1.4rem;
+	}
+
 	@media screen and (max-width: 950px)
 	{
 		#recents
