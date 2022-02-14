@@ -15,7 +15,7 @@ credits:
 - Cindy Ci as "Penelope"
 - Iain Um as "Sticky the Glue Boy"
 
-img: final-destination
+img: spring-the-rubber-boy-wonder
 layout: ../../layouts/film-page.astro
 ---
 
