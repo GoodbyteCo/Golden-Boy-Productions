@@ -9,15 +9,23 @@
 
 [build.processing]
 	skip_processing = false
-	html.pretty_urls = true
-	images.compress = true
-	css.bundle = false
-	js.bundle = false
-	css.minify = true
-	js.minify = true
 
-[context.deploy-preview.processing]
-	images.compress = false
+[build.processing.html]
+	pretty_urls = true
+
+[build.processing.images]
+	compress = true
+	
+[build.processing.css]
+	bundle = false
+	minify = true
+
+[build.processing.js]
+	bundle = false
+	minify = true
+
+[context.deploy-preview.processing.images]
+	compress = false
 
 
 ## Redirect vanity domain
