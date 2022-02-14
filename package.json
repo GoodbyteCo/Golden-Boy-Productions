@@ -12,15 +12,13 @@
 		"convert:avif": "avif --input=public/posters/*.jpg --speed=6 --quality=70 --overwrite",
 		"convert:webp": "imagemin public/posters/*.jpg --out-dir=public/posters --plugin.webp.method=1 --plugin.webp.quality=80"
 	},
-	"dependencies":
-	{
-		"astro": "0.22.20",
-		"avif": "^0.1.0",
-		"imagemin-cli": "^7.0.0",
-		"imagemin-webp": "^7.0.0"
-	},
 	"devDependencies":
 	{
+		"astro": "0.22.20",
+		"autoprefixer": "^10.4.2",
+		"avif": "^0.1.0",
+		"imagemin-cli": "^7.0.0",
+		"imagemin-webp": "^7.0.0",
 		"eslint-config-goodbyte-styleguide": "^0.0.7"
 	}
 }
