@@ -1,0 +1,66 @@
+# This site is hosted on Netlify using the following configuration
+
+
+## General build settings
+
+[build]
+	command = "npm run build"
+	publish = "dist"
+
+[build.processing]
+	skip_processing = false
+
+[build.processing.html]
+	pretty_urls = true
+
+[build.processing.images]
+	compress = true
+	
+[build.processing.css]
+	bundle = false
+	minify = true
+
+[build.processing.js]
+	bundle = false
+	minify = true
+
+[context.deploy-preview.processing.images]
+	compress = false
+
+
+## Redirect vanity domain
+
+[[redirects]]
+	from = "https://goldenboy.productions"
+	to = "https://goldenboyproductions.ca"
+	status = 301
+	force = true
+
+[[redirects]]
+	from = "https://goldenboy.productions/*"
+	to = "https://goldenboyproductions.ca/:splat"
+	status = 301
+	force = true
+
+
+## Redirect bare Netlify address
+
+[[redirects]]
+	from = "https://golden-boy-productions.netlify.app"
+	to = "https://goldenboyproductions.ca"
+	status = 301
+	force = true
+
+[[redirects]]
+	from = "https://golden-boy-productions.netlify.app/*"
+	to = "https://goldenboyproductions.ca/:splat"
+	status = 301
+	force = true
+
+
+## Redirects for special pages
+
+# [[redirects]]
+# 	from = "/your-student-government"
+# 	to = "/features/your-student-government"
+# 	status = 301
