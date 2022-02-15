@@ -1,19 +1,16 @@
 <div class="video-container">
-	<video 
-		loop
-		autoplay
-		muted
-		src="/assets/hero.mp4"
-		width="100%"
-		alt=""
-	/>
+	<picture>
+		<source type="image/avif" srcset="/assets/hero/hammer-climb.avif"/>
+		<source type="image/webp" srcset="/assets/hero/hammer-climb.webp"/>
+		<img src="/assets/hero/hammer-climb-static.png" alt="Trailer for Hammer CLimb"/>
+	</picture>
 </div>
 
 <div class="floating-box">
-	<h6>Watch:</h6>
-	<p>Two and a Egg Roll Man</p>
-	<a href="https://www.youtube.com/watch?v=hlgxJE9St6M" class="cta">
-		Watch film on Youtube
+	<h6>New Release:</h6>
+	<p>Hammer Climb</p>
+	<a href="/shorts/hammer-climb" class="cta">
+		Watch short film
 	</a>
 </div>
 
@@ -38,12 +35,11 @@
 		padding: 0 18px;
 	}
 
-	video
+	img
 	{
 		width: 100%;
-		/* "color correction" */
-		background: rgba(0, 0, 0, 0.75);
-		filter: brightness(85%) contrast(85%);
+		aspect-ratio: 1200 / 675;
+		background: var(--black);
 	}
 
 	.floating-box
@@ -57,9 +53,16 @@
 		margin-left: 40px;
 	}
 
+	.floating-box h6
+	{
+		font-size: 1.3rem;
+		margin: 1rem 0 0;
+	}
+
 	.floating-box p
 	{
 		font-size: 2.4rem;
+		margin-top: 12px;
 	}
 
 	.floating-box a
