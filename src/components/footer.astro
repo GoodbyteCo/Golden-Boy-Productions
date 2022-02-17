@@ -8,10 +8,10 @@ import Logo from '../components/logo.astro'
 	</section>
 	<section class="links">
 		<ul>
-			<li><a href="/sitemap.xml">Sitemap</a></li>
-			<li><a href="/films">All Films</a></li>
 			<li><a href="/about">About Us</a></li>
+			<li><a href="/films">All Films</a></li>
 			<li><a href="/contact">Get In Touch</a></li>
+			<li><a href="/sitemap.xml">Press Kit</a></li>
 		</ul>
 		<ul>
 			<li>
@@ -164,9 +164,12 @@ import Logo from '../components/logo.astro'
 		text-transform: uppercase;
 	}
 
-	section.legal a:hover, section.legal a:focus
+	section.legal a
 	{
-		text-decoration: underline;
+		background-image: linear-gradient(var(--bright-yellow), var(--bright-yellow));
+		background-size: 100% 0.6em;
+		background-position: left bottom;
+		background-repeat: no-repeat;
 	}
 
 	@media screen and (max-width: 950px)
