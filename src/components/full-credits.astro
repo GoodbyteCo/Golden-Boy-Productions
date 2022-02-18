@@ -1,0 +1,52 @@
+---
+const { data } = Astro.props
+---
+
+<style>
+	dl
+	{
+		text-align: center;
+		padding: 30px;
+		max-width: 1440px;
+		margin: 80px auto 0;
+	}
+
+	dt, dd, div
+	{
+		display: inline-block;
+	}
+
+	div
+	{
+		padding: 8px 0;
+	}
+
+	dt
+	{
+		font-size: 1.1rem;
+		font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+		line-height: 1.4;
+		word-spacing: 0;
+		max-width: 20ch;
+		text-align: end;
+		margin-inline-end: 10px;
+		opacity: 0.7;
+	}
+
+	dd
+	{
+		font-size: 2rem;
+		letter-spacing: 0.05em;
+		line-height: 1.6;
+		padding: 0;
+		margin: 0;
+		margin-inline-end: 30px;
+	}
+
+</style>
+
+<dl>
+{
+	data.map((credit) => Object.keys(credit).map((title) => (<div><dt>{title}</dt>{credit[title].map((name) => (<dd>{name}</dd>))}</div>)))
+}
+</dl>
