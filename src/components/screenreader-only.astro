@@ -1,0 +1,15 @@
+<div class="screenreader-only">
+	<slot/>
+</div>
+
+<style>
+	.screenreader-only
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 1px;
+		height: 1px;
+		clip: rect(1px 1px 1px 1px);
+		clip: rect(1px, 1px, 1px, 1px);
+	}
+</style>
