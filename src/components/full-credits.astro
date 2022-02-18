@@ -43,10 +43,31 @@ const { data } = Astro.props
 		margin-inline-end: 30px;
 	}
 
+	@media screen and (max-width: 840px)
+	{
+		dt, dd, div
+		{
+			max-width: 100%;
+			display: block;
+			margin-inline-end: 0px;
+			text-align: center;
+		}
+	}
 </style>
 
 <dl>
 {
-	data.map((credit) => Object.keys(credit).map((title) => (<div><dt>{title}</dt>{credit[title].map((name) => (<dd>{name}</dd>))}</div>)))
+	data.map((credit) => Object.keys(credit)
+		.map((title) => (
+			<div>
+				<dt>{title}</dt>
+				{
+					credit[title].map((name) => (
+						<dd>{name}</dd>
+					))
+				}
+			</div>
+		))
+	)
 }
 </dl>
