@@ -1,0 +1,265 @@
+---
+import Global from '../../components/global.astro'
+import Header from '../../components/small-header.astro'
+import ScreenreaderOnly from '../../components/screenreader-only.astro'
+import Footer from '../../components/footer.astro'
+import Credits from '../../components/full-credits.astro'
+
+const { content } = Astro.props
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<Global/>
+        <title>{content.title} | Golden Boy Productions</title>
+	</head>
+	<body>
+		<Header/>
+		<main>
+			<h1>
+				Golden Boy Productions presents:
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 601.5 322"
+					class="wordmark"
+					aria-label={content.title}
+				>
+					<title>{content.title}</title>
+					<path d="m47 295-13 11-24-7-9-60 26-25 30 1-11 18-25-2 8 52 16 4-3-24 18-13 9 57-18 14Zm29-6-7-40 26-22 20 5 7 42-25 21Zm15-11 14 3-6-38-14-1Zm44 0-6-40-13-5 18-12 11 6 6 39 14 3-6-36-10-6 15-12 11 7 7 41-24 21Zm421-13 7-40-12-2 14-10 2-12 18-4-3 19 19 2-10 11-10-2-6 32 13 8-19 9Zm-364 2-5-41 24-19 19 10 2 13-25 11 2 12 28 7-21 14Zm14-34 10-6-12-7Zm319 28 6-37-11-8-6 34 7 8-18 7-8-9 6-39-9-10 19-7 10 11 18-7 12 11-7 40 10 8-21 7Zm-278-1-7-41-12-5 17-13 12 7 9-11 14 5 11-9 12 7 15-12 15 7 7 40 11 4-17 13-11-5-6-38-13-3 5 34 10 5-15 13-11-6-7-40-7-3-6 10-15-5 5 34 13 6-18 12Zm194-15 8-41 30-10 14 16-2 13-28 2-2 12 25 16-25 7Zm24-27 12-3-10-11Zm-52 26 7-38-12-7-6 34 8 9-19 5-8-8 6-38-11-7-6 34 7 8-18 7-8-9 7-40-11-10 21-7 9 11 18-6 13 11 17-7 13 13-7 39 9 8-20 6ZM99 192l14-16 21 3-3-17-34-8-3-22 25-28 25 3-10 17-22-3 3 15 33 7 5 27-27 25Zm67-11-6-41-12 2 10-14-2-12 16-10 3 19 18-3-1 3 14-10 12 6 5 38 14 3-6-36-10-5 16-12 11 6 7 40 11 5-15 13-13-6-14 11-17-6-6-41-10-3-3 6-11 2 5 32 16 4-16 15Zm101-20-6-38 27-24-3-21 15-9 14 81-25 18Zm16-11 14 4-6-34-13-5Zm37 1-6-41 25-19 19 10 2 13-25 11 2 12 28 7-22 14Zm14-33 10-7-13-7Zm41 26-7-39-12-7 16-13 13 8 15-12 15 6 6 40 12 4-17 14-11-6-6-38-13-3 5 34 10 6-15 12Zm61-11-6-41-12 2 10-14-2-12 16-9 3 18 18-3-5 13-11 1 5 32 16 4-16 15ZM46 109l16-14-17-5-9-54-14-6 17-16 16 8 8 53 21 4-8-50-14-6L78 7l16 8 9 54 6 25-28 26Zm23-13 21 7-4-18Zm48-13-7-40 26-22 20 5 8 43-26 21Zm15-10 15 2-7-38-14-1Zm43-1-6-40-12-4 18-13 11 6 6 39 13 2-6-36-9-4 15-12 11 6 7 40 11 5-14 13-14-6-14 11Zm61-9-7-41-11-4 16-13 12 7 10-11 16 5-10 16-15-4 6 33 13 6-19 12Z"/>
+				</svg>
+			</h1>
+			<a class="watch-trailer" href="#trailer">
+				<span>Watch the trailer</span>
+			</a>
+
+			<section class="credits">
+				<ScreenreaderOnly>
+					<h2>Credits</h2>
+				</ScreenreaderOnly>
+				<ul>
+					<title>Starring</title>
+					{
+						content.credits[0]['Starring'].map(credit => (<li>{credit}</li>))
+					}
+				</ul>
+				<h6>Directed by</h6>
+				<p>David Vassos</p>
+			</section>
+
+			<section id="trailer">
+				<ScreenreaderOnly>
+					<h2>Trailer</h2>
+				</ScreenreaderOnly>
+				<iframe
+					src={`https://www.youtube.com/embed/${content.id}`}
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+				/>
+			</section>
+
+			<section class="synopsis">
+				<ScreenreaderOnly>
+					<h2>Synopsis</h2>
+				</ScreenreaderOnly>
+				<slot/>
+			</section>
+
+			<section class="release">
+				<h2>Coming</h2>
+				<p>
+				{
+					new Date(content.released).toLocaleString('en', {
+						month: 'long',
+						day: 'numeric',
+						year: 'numeric',
+					})
+				}
+				</p>
+			</section>
+
+			<section class="full-credits">
+				<Credits data={content.credits}/>
+			</section>
+		</main>
+		<Footer/>
+	</body>
+</html>
+
+<style>
+	body
+	{
+		/* theme overrides */
+		--orange: #ef6301;
+		--yellow: #ffc600;
+
+		--blue: #497199; /* #010d19 */
+		--cream: #f8f2dd;
+
+		--bright-yellow: var(--orange);
+		--pale-yellow: var(--blue);
+		--black: var(--cream);
+
+		box-shadow: inset 0 0 0 10px var(--orange),
+		            inset 0 0 0 20px var(--yellow);
+	}
+
+	html
+	{
+		scroll-behavior: smooth;
+	}
+
+	h1
+	{
+		font-weight: normal;
+		font-size: 1.3rem;
+		text-align: center;
+		margin: 4rem 0;
+	}
+
+	svg.wordmark
+	{
+		display: block;
+		width: 80%;
+		max-width: 500px;
+		margin: 40px auto;
+		transform: translateX(2%);
+
+		fill: var(--yellow);
+		filter: drop-shadow(-1.5vw 1.5vw 0px var(--orange));
+	}
+
+	@media screen and (min-width: 635px)
+	{
+		svg.wordmark
+		{
+			filter: drop-shadow(-9.5px 9.5px 0px var(--orange));
+		}
+	}
+
+	a.watch-trailer
+	{
+		display: block;
+		margin: auto;
+		max-width: 30ch;
+		text-align: center;
+		outline: none;
+	}
+
+	a.watch-trailer span
+	{
+		display: block;
+		margin: auto;
+		max-width: 20ch;
+		text-align: center;
+
+		font-size: 1.3rem;
+		color: var(--yellow);
+		background: var(--blue);
+		border: 2px solid var(--yellow);
+		border-radius: 100px;
+		padding: 1em 2ch;
+
+		box-shadow: 0 0 0 0px var(--blue),
+		            0 0 0 0px var(--orange);
+
+		transition: color 0.2s ease,
+		            box-shadow 0.3s ease-in-out,
+		            transform 0.3s ease-in-out;
+	}
+
+	a.watch-trailer:hover span, a.watch-trailer:focus span
+	{
+		color: var(--cream);
+		transform: scale(0.9);
+		box-shadow: 0 0 0 6px var(--blue),
+		            0 0 0 8px var(--orange);
+
+		transition: color 0.15s ease,
+		            box-shadow 0.25s ease-out,
+		            transform 0.25s ease-out;
+	}
+
+	section.credits
+	{
+		margin: 30px;
+	}
+
+	section.credits ul
+	{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+		gap: 10px 3ch;
+
+		max-width: 800px;
+		padding: 30px;
+		margin: auto;
+
+		font-size: 2rem;
+		list-style: none;
+	}
+
+	section.credits h6
+	{
+		text-align: center;
+		font-size: 1.3rem;
+		opacity: 0.7;
+	}
+
+	section.credits p
+	{
+		text-align: center;
+		font-size: 2rem;
+	}
+
+	#trailer
+	{
+		margin: 0 auto;
+		width: 80vw;
+		max-width: 1200px;
+		padding: 80px 0;
+	}
+
+	iframe
+	{
+		width: 100%;
+		aspect-ratio: 16 / 9;
+
+		background-color: var(--creme);
+		box-shadow: 0 0 0 10px var(--yellow);
+	}
+
+	section.synopsis :global(p)
+	{
+		max-width: 70ch;
+		padding: 0 30px;
+		margin: auto;
+		text-align: center;
+
+		font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+		font-size: 2rem;
+		line-height: 1.6;
+		letter-spacing: 0;
+		word-spacing: 0;
+		text-transform: none;
+	}
+
+	section.release h2
+	{
+		font-size: 1.3rem;
+		opacity: 0.7;
+		text-align: center;
+		margin: 60px 0 20px;
+	}
+
+	section.release p
+	{
+		font-size: 4rem;
+		text-align: center;
+		margin: 0;
+	}
+</style>
