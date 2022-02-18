@@ -11,6 +11,7 @@ credits:
 - Eric Rodomar as "Rory"
 - Bennett Penner as "Trevor"
 - and Hamza Ali as "Chester"
+-
 - Hajime! by Nicholas Vassos
 
 accolades:

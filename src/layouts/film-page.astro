@@ -2,6 +2,7 @@
 import Global from '../components/global.astro'
 import Header from '../components/header.astro'
 import Accolades from '../components/accolades.astro'
+import ScreenreaderOnly from '../components/screenreader-only.astro'
 import Footer from '../components/footer.astro'
 
 const { content } = Astro.props
@@ -51,10 +52,16 @@ const { content } = Astro.props
 			</section>
 			<section class="synopsis">
 				<h2>Synopsis</h2>
-				<p><slot/></p>
+				<slot/>
 			</section>
 			<section class="accolades">
+			{
+				(content.accolades) &&
+				<ScreenreaderOnly>
+					<h2>Awards and Accolades</h2>
+				</ScreenreaderOnly>
 				<Accolades from={content.accolades}/>
+			}
 			</section>
 		</main>
 		<Footer/>
