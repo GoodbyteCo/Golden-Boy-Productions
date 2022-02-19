@@ -16,7 +16,7 @@ import Logo from '../components/logo.astro'
 		<ul>
 			<li>
 				<a 
-					href="https://www.youtube.com/c/GoldenBoyProductions/about"
+					href="https://www.youtube.com/c/GoldenBoyProductions/"
 					target="_blank" rel="noopener"
 					aria-label="Youtube page (opens in a new tab)"
 				>
@@ -56,7 +56,7 @@ import Logo from '../components/logo.astro'
 		</ul>
 	</section>
 	<section class="legal">
-		<p>&copy; Golden Boy Productions, 2022</p>
+		<p>&copy; Golden Boy Productions, {new Date().getFullYear()}</p>
 		<p>Website by <a href="https://goodbyte.ca">Goodbyte</a></p>
 	</section>
 </footer>
@@ -64,7 +64,6 @@ import Logo from '../components/logo.astro'
 <style>
 	footer
 	{
-		/* border-top: 2px solid var(--black); */
 		margin-top: 100px;
 		padding: 60px;
 		display: flex;
