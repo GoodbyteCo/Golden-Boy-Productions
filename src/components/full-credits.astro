@@ -7,8 +7,8 @@ const { data } = Astro.props
 	{
 		text-align: center;
 		padding: 30px;
-		max-width: 1440px;
-		margin: 80px auto 0;
+		max-width: 2040px;
+		margin: 0 auto;
 	}
 
 	dt, dd, div
@@ -23,8 +23,7 @@ const { data } = Astro.props
 
 	dt
 	{
-		font-size: 1.1rem;
-		font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+		font-size: 0.9rem;
 		line-height: 1.4;
 		word-spacing: 0;
 		max-width: 20ch;
@@ -35,15 +34,16 @@ const { data } = Astro.props
 
 	dd
 	{
-		font-size: 2rem;
-		letter-spacing: 0.05em;
+		font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+		font-size: 2.5rem;
+		letter-spacing: -0.01em;
 		line-height: 1.6;
 		padding: 0;
 		margin: 0;
 		margin-inline-end: 30px;
 	}
 
-	@media screen and (max-width: 840px)
+	@media screen and (max-width: 575px)
 	{
 		dt, dd, div
 		{
@@ -51,6 +51,11 @@ const { data } = Astro.props
 			display: block;
 			margin-inline-end: 0px;
 			text-align: center;
+		}
+
+		dt :global(br)
+		{
+			display: none;
 		}
 	}
 </style>

@@ -28,7 +28,7 @@ const { content } = Astro.props
 					<path d="m47 295-13 11-24-7-9-60 26-25 30 1-11 18-25-2 8 52 16 4-3-24 18-13 9 57-18 14Zm29-6-7-40 26-22 20 5 7 42-25 21Zm15-11 14 3-6-38-14-1Zm44 0-6-40-13-5 18-12 11 6 6 39 14 3-6-36-10-6 15-12 11 7 7 41-24 21Zm421-13 7-40-12-2 14-10 2-12 18-4-3 19 19 2-10 11-10-2-6 32 13 8-19 9Zm-364 2-5-41 24-19 19 10 2 13-25 11 2 12 28 7-21 14Zm14-34 10-6-12-7Zm319 28 6-37-11-8-6 34 7 8-18 7-8-9 6-39-9-10 19-7 10 11 18-7 12 11-7 40 10 8-21 7Zm-278-1-7-41-12-5 17-13 12 7 9-11 14 5 11-9 12 7 15-12 15 7 7 40 11 4-17 13-11-5-6-38-13-3 5 34 10 5-15 13-11-6-7-40-7-3-6 10-15-5 5 34 13 6-18 12Zm194-15 8-41 30-10 14 16-2 13-28 2-2 12 25 16-25 7Zm24-27 12-3-10-11Zm-52 26 7-38-12-7-6 34 8 9-19 5-8-8 6-38-11-7-6 34 7 8-18 7-8-9 7-40-11-10 21-7 9 11 18-6 13 11 17-7 13 13-7 39 9 8-20 6ZM99 192l14-16 21 3-3-17-34-8-3-22 25-28 25 3-10 17-22-3 3 15 33 7 5 27-27 25Zm67-11-6-41-12 2 10-14-2-12 16-10 3 19 18-3-1 3 14-10 12 6 5 38 14 3-6-36-10-5 16-12 11 6 7 40 11 5-15 13-13-6-14 11-17-6-6-41-10-3-3 6-11 2 5 32 16 4-16 15Zm101-20-6-38 27-24-3-21 15-9 14 81-25 18Zm16-11 14 4-6-34-13-5Zm37 1-6-41 25-19 19 10 2 13-25 11 2 12 28 7-22 14Zm14-33 10-7-13-7Zm41 26-7-39-12-7 16-13 13 8 15-12 15 6 6 40 12 4-17 14-11-6-6-38-13-3 5 34 10 6-15 12Zm61-11-6-41-12 2 10-14-2-12 16-9 3 18 18-3-5 13-11 1 5 32 16 4-16 15ZM46 109l16-14-17-5-9-54-14-6 17-16 16 8 8 53 21 4-8-50-14-6L78 7l16 8 9 54 6 25-28 26Zm23-13 21 7-4-18Zm48-13-7-40 26-22 20 5 8 43-26 21Zm15-10 15 2-7-38-14-1Zm43-1-6-40-12-4 18-13 11 6 6 39 13 2-6-36-9-4 15-12 11 6 7 40 11 5-14 13-14-6-14 11Zm61-9-7-41-11-4 16-13 12 7 10-11 16 5-10 16-15-4 6 33 13 6-19 12Z"/>
 				</svg>
 			</h1>
-			<a class="watch-trailer" href="#trailer">
+			<a class="primary-cta" href="#trailer">
 				<span>Watch the trailer</span>
 			</a>
 
@@ -39,7 +39,8 @@ const { content } = Astro.props
 				<ul>
 					<title>Starring</title>
 					{
-						content.credits[0]['Starring'].map(credit => (<li>{credit}</li>))
+						content.credits.filter(entry => entry['Starring'])[0]['Starring'] // yuck!
+							.map(credit => (<li>{credit}</li>))
 					}
 				</ul>
 				<h6>Directed by</h6>
@@ -79,6 +80,9 @@ const { content } = Astro.props
 				</p>
 			</section>
 
+			<a class="primary-cta meet-cast" href="/features/your-student-government/meet-the-cast">
+				<span>Meet the cast</span>
+			</a>
 			<section class="full-credits">
 				<Credits data={content.credits}/>
 			</section>
@@ -138,7 +142,7 @@ const { content } = Astro.props
 		}
 	}
 
-	a.watch-trailer
+	a.primary-cta
 	{
 		display: block;
 		margin: auto;
@@ -147,7 +151,7 @@ const { content } = Astro.props
 		outline: none;
 	}
 
-	a.watch-trailer span
+	a.primary-cta span
 	{
 		display: block;
 		margin: auto;
@@ -169,7 +173,7 @@ const { content } = Astro.props
 		            transform 0.3s ease-in-out;
 	}
 
-	a.watch-trailer:hover span, a.watch-trailer:focus span
+	a.primary-cta:hover span, a.primary-cta:focus span
 	{
 		color: var(--cream);
 		transform: scale(0.9);
@@ -237,7 +241,7 @@ const { content } = Astro.props
 	{
 		max-width: 70ch;
 		padding: 0 40px;
-		margin: auto;
+		margin: 20px auto;
 		text-align: center;
 
 		font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
@@ -262,5 +266,23 @@ const { content } = Astro.props
 		text-align: center;
 		margin: 0;
 		padding: 0 30px;
+	}
+
+	a.meet-cast
+	{
+		margin: 80px auto 40px;
+	}
+
+	@media screen and (max-width: 575px)
+	{
+		section.synopsis :global(p)
+		{
+			font-size: 1.6rem;
+		}
+
+		section.release p
+		{
+			font-size: 3rem;
+		}
 	}
 </style>
