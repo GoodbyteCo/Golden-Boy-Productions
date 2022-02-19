@@ -5,7 +5,7 @@ id: x_OUktibPgU
 
 
 credits: [
-	"Directed, Shot,<br> & Edited by": [
+	"Directed,&nbsp;Shot, &amp;&nbsp;Edited&nbsp;by": [
 		David Vassos,
 	],
 	Produced by: [
@@ -28,7 +28,7 @@ credits: [
 		Cooper Levy,
 		Jake O'Brien,
 	],
-	Also<br> Starring: [
+	Also Starring: [
 		Jacob Dey,
 		John A. Geddes,
 		Paul Smith,
@@ -43,16 +43,16 @@ credits: [
 		Iain Um,
 		Mike Jankovich,
 	],
-	Original<br> Score by: [
+	Original Score&nbsp;by: [
 		Lilac Toh,
 	],
-	Makeup<br> Artist: [
+	Makeup Artist: [
 		Sydney Erin Kowal,
 	],
-	Sound Editing<br> and Mixing by: [
+	Sound&nbsp;Editing and&nbsp;Mixing&nbsp;by: [
 		John Sanfillipo,
 	],
-	Featuring<br> Songs by: [
+	Featuring Songs&nbsp;by: [
 		Cristina Geeze,
 		Skyepaphora Griffith,
 		Discontinuity,
@@ -60,15 +60,15 @@ credits: [
 		Nicholas Vassos,
 		Adam Vriend,
 	],
-	First Assistant Directors: [
+	First&nbsp;Assistant Directors: [
 		Steph Fung,
 		Darby Huk,
 		Sam Sosnowski,
 	],
-	Second Assistant Director: [
+	Second&nbsp;Assistant Director: [
 		Abbey Playford,
 	],
-	Camera<br> Operator: [
+	Camera Operator: [
 		Roscoe Dillman,
 	],
 	Production Assistants: [
@@ -83,13 +83,13 @@ credits: [
 		Kunal Sengupta,
 		Adam Vriend,
 	],
-	Behind the Scenes Photographer: [
+	Behind&nbsp;the&nbsp;Scenes Photographer: [
 		Jonathon Gallucci,
 	],
 	Promotional Photographer: [
 		José Andreas Bordas,
 	],
-	Title<br> Designed by: [
+	Title Designed&nbsp;by: [
 		Jack Guinane,
 	],
 ]
