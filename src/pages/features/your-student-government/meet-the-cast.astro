@@ -20,6 +20,9 @@ const { content } = Astro.props
 			<section>
 				<p>todo</p>
 			</section>
+			<a class="primary-cta" href="/features/your-student-government">
+				<span>Back to film page</span>
+			</a>
 		</main>
 		<Footer/>
 	</body>
@@ -58,5 +61,48 @@ const { content } = Astro.props
 	{
 		text-align: center;
 		font-size: 3rem;
+	}
+
+	a.primary-cta
+	{
+		display: block;
+		margin: auto;
+		max-width: 30ch;
+		text-align: center;
+		outline: none;
+	}
+
+	a.primary-cta span
+	{
+		display: block;
+		margin: auto;
+		max-width: 20ch;
+		text-align: center;
+
+		font-size: 1.3rem;
+		color: var(--yellow);
+		background: var(--blue);
+		border: 2px solid var(--yellow);
+		border-radius: 100px;
+		padding: 1em 2ch;
+
+		box-shadow: 0 0 0 0px var(--blue),
+		            0 0 0 0px var(--orange);
+
+		transition: color 0.2s ease,
+		            box-shadow 0.3s ease-in-out,
+		            transform 0.3s ease-in-out;
+	}
+
+	a.primary-cta:hover span, a.primary-cta:focus span
+	{
+		color: var(--cream);
+		transform: scale(0.9);
+		box-shadow: 0 0 0 6px var(--blue),
+		            0 0 0 8px var(--orange);
+
+		transition: color 0.15s ease,
+		            box-shadow 0.25s ease-out,
+		            transform 0.25s ease-out;
 	}
 </style>
