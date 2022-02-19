@@ -47,7 +47,7 @@ credits: [
 		Lilac Toh,
 	],
 	Makeup<br> Artist: [
-		Sydney Kowal,
+		Sydney Erin Kowal,
 	],
 	Sound Editing<br> and Mixing by: [
 		John Sanfillipo,
@@ -72,8 +72,9 @@ credits: [
 		Roscoe Dillman,
 	],
 	Production Assistants: [
+		Nathan Byrne,
 		Naomi Frooman,
-		James Hoban,
+		James P. Hoban,
 		Clair Mooney,
 		Grant Polley,
 		Kiah Raine,
