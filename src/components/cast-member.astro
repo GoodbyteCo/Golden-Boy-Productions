@@ -1,0 +1,67 @@
+---
+const { img, name, role } = Astro.props
+---
+
+<li>
+	<picture>
+		<source type="image/avif" srcset={`/assets/your-student-government/${img}.avif`}/>
+		<source type="image/webp" srcset={`/assets/your-student-government/${img}.webp`}/>
+		<img src={`/assets/your-student-government/${img}.jpg`} alt={`Headshot of ${name}`}/>
+	</picture>
+	<h2>{name}</h2>
+	<p class="role">{role}</p>
+	<p class="bio">
+		<slot/>
+	</p>
+</li>
+
+<style>
+	li
+	{
+		display: block;
+		text-align: center;
+	}
+
+	img
+	{
+		display: block;
+		margin: auto;
+		width: 90%;
+		aspect-ratio: 2 / 3;
+		object-fit: cover;
+
+		background: var(--black);
+		box-shadow: 0 0 0 5px var(--black);
+	}
+
+	h2, li p.bio
+	{
+		font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+		line-height: 1.6;
+		letter-spacing: 0;
+		word-spacing: 0;
+		text-transform: none;
+		font-size: 1.6rem;
+	}
+
+	li p.bio
+	{
+		text-align: justify;
+		hyphens: auto;
+		word-wrap: break-word;
+  		overflow-wrap: break-word;
+	}
+
+	h2
+	{
+		font-size: 3rem;
+		line-height: 1;
+		margin: 20px auto 0;
+	}
+
+	li p.role
+	{
+		font-size: 1rem;
+		margin: 5px auto 20px;
+	}
+</style>
