@@ -1,11 +1,8 @@
 ---
 import Global from '../../../components/global.astro'
 import Header from '../../../components/small-header.astro'
-import ScreenreaderOnly from '../../../components/screenreader-only.astro'
-import Footer from '../../../components/footer.astro'
 import CastMember from '../../../components/cast-member.astro'
-
-const { content } = Astro.props
+import Footer from '../../../components/footer.astro'
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -43,9 +40,9 @@ const { content } = Astro.props
 						program, Cooper graduated with a degree in Computer Science with a specialization
 						in Music, and ever since he has been hooked to the process of editing and sound
 						design. His writing and directing debut of BABA (September 2021) is what has
-						sparked his drive to pursue acting, as well as writing and directing more professionally
-						alongside his childhood best-friend, Cole Walderman. Cooper took acting classes
-						with Armstrong Acting Studios, and seeks modelling work internationally.
+						sparked his drive to pursue acting, as well as writing and directing more 
+						professionally alongside his childhood best-friend, Cole Walderman. Cooper took
+						acting classes with Armstrong Acting Studios, and seeks modelling work internationally.
 					</CastMember>
 					<CastMember name="Jake O'Brien" role="“Gunther Trost”" img="jake">
 						Jake O'Brien is a Toronto-born filmmaker and graduate of Queen's University's
@@ -93,6 +90,7 @@ const { content } = Astro.props
 		color: var(--yellow);
 		text-shadow: -3px 3px 0 var(--orange);
 		margin: 4rem 0;
+		padding: 0 30px;
 	}
 
 	ul
