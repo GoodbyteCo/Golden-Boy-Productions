@@ -41,16 +41,19 @@ credits: [
 		Gavin Hugh,
 		Keady Morgan,
 		Iain Um,
-		Mike Jankovich,
+		# Mike Jankovich,
 	],
 	Original Score&nbsp;by: [
 		Lilac Toh,
+	],
+	Original&nbsp;Score Performed&nbsp;&amp;&nbsp;Produced&nbsp;by: [
+		Max Kingsley,
 	],
 	Makeup Artist: [
 		Sydney Erin Kowal,
 	],
 	Sound&nbsp;Editing and&nbsp;Mixing&nbsp;by: [
-		John Sanfillipo,
+		John Sanfilippo,
 	],
 	Featuring Songs&nbsp;by: [
 		Cristina Geeze,
