@@ -1,11 +1,12 @@
-# This site is hosted on Netlify using the following configuration
-
-
 ## General build settings
 
 [build]
-	command = "npm run build"
+	command = "npx pnpm build"
 	publish = "dist"
+
+[build.environment]
+	NODE_VERSION = "16"
+	NPM_FLAGS = "--version" # prevent auto npm install
 
 [build.processing]
 	skip_processing = false
@@ -27,6 +28,8 @@
 [context.deploy-preview.processing.images]
 	compress = false
 
+[[plugins]]
+	package = "./plugins/pnpm-preinstaller"
 
 ## Redirect vanity domain
 
