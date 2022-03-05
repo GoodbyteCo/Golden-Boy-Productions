@@ -1,7 +1,8 @@
 ## General build settings
 
 [build]
-	command = "pnpm install --shamefully-hoist && pnpm run build"
+	command = "npx pnpm build"
+	# command = "npx pnpm@6 install --shamefully-hoist --store-dir=.pnpm --frozen-lockfile && npx pnpm@6 build"
 	publish = "dist"
 
 [build.environment]
