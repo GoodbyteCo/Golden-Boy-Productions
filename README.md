@@ -7,16 +7,19 @@
 Install dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
-| COMMAND       | DESCRIPTION                             |
-|:--------------|:----------------------------------------|
-| `npm run dev` | Run the site locally                    |
-| `npm run img` | Convert all JPG images to Avif and WebP |
-| `npm run fix` | Fix any linting errors                  |
+| COMMAND                  | DESCRIPTION                                       |
+|:-------------------------|:--------------------------------------------------|
+| `pnpm run dev`           | Run the site locally                              |
+| `pnpm run img`           | Convert all JPG images to Avif and WebP           |
+| `pnpm run lint`          | Check for linting errors                          |
+| `pnpm run lint -- --fix` | Attempt to fix linting errors                     |
 
 
 ### Deployment
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/df5ae10d-632d-44ed-a0ce-03184d814493/deploy-status)](https://app.netlify.com/sites/golden-boy-productions/deploys)
+Deploys automatically to Netlify on push to `main` branch.
+
+![Status](https://api.netlify.com/api/v1/badges/df5ae10d-632d-44ed-a0ce-03184d814493/deploy-status)

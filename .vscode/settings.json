@@ -1,25 +1,27 @@
 {
 	"editor.formatOnSave": false,
-	"css.validate": false,
-	"less.validate": false,
-	"scss.validate": false,
+	"css.validate": true,
 	"eslint.validate": ["vue", "javascript"],
-	"eslint.packageManager": "npm",
-	"stylelint.enable": true,
-	"stylelint.validate": ["vue", "css"],
+	"eslint.packageManager": "pnpm",
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true,
-		"source.fixAll.stylelint": true
+		"source.fixAll.eslint": true
 	},
 	"files.exclude": {
 		"**/.git": true,
 		".gitignore": true,
 		"**/.DS_Store": true,
-		"package-lock.json": true,
+		"pnpm-lock.yaml": true,
 		"node_modules": true,
 		"dist": true,
+		"plugins": true,
 		".eslintrc": true,
 		"astro.config.mjs": true,
-		"postcss.config.cjs": true
-	}
+		"postcss.config.cjs": true,
+	},
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [{
+			"scope": "string.key.json5",
+			"settings": { "foreground": "#8BDEDB" },
+		}],
+	},
 }
