@@ -30,9 +30,14 @@ const { content } = Astro.props
 			</h1>
 			<h6 class="byline">A film by</h6>
 			<p class="byline">David Vassos</p>
-			<a class="primary-cta" href="#trailer">
-				<span>Watch the trailer</span>
-			</a>
+			<div class="cta-section">
+				<a class="secondary-cta" href="#trailer">
+					View trailer
+				</a>
+				<a class="primary-cta" href="https://www.youtube.com/watch?v=xu6iHpGgrt4" target="_blank">
+					<span>Watch the full film</span>
+				</a>
+			</div>
 
 			<section id="trailer">
 				<ScreenreaderOnly>
@@ -129,10 +134,19 @@ const { content } = Astro.props
 		}
 	}
 
+	.cta-section
+	{
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+		justify-content: center;
+		align-items: center;
+
+	}
+
 	a.primary-cta
 	{
 		display: block;
-		margin: auto;
 		max-width: 30ch;
 		text-align: center;
 		outline: none;
@@ -168,8 +182,13 @@ const { content } = Astro.props
 		            0 0 0 8px var(--orange);
 
 		transition: color 0.15s ease,
-		            box-shadow 0.25s ease-out,
-		            transform 0.25s ease-out;
+		            box-shadow 0.2s ease-out,
+		            transform 0.2s ease-out;
+	}
+
+	a.secondary-cta
+	{
+		font-size: 1.3rem;
 	}
 
 	h6.byline
@@ -233,6 +252,21 @@ const { content } = Astro.props
 		text-align: center;
 		margin: 0;
 		padding: 0 30px;
+	}
+
+	section.release p::after
+	{
+		content: "Out now!";
+		display: block;
+		max-width: 10ch;
+		max-width: max-content;
+		margin: auto;
+		transform:  translateY(-15px) translateX(110px) rotate(-15deg);
+
+		background: var(--yellow);
+		color: #000;
+		font-size: 2rem;
+		padding: 0.2em 2ch;
 	}
 
 	a.meet-cast
