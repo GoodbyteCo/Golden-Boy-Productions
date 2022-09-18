@@ -1,7 +1,7 @@
 ---
 title: Your Student Government
-released: 2022-04-29
-id: x_OUktibPgU
+released: 2022-07-15
+id: V1NGLVhzLLI
 
 
 credits: [
@@ -52,7 +52,7 @@ credits: [
 	Makeup Artist: [
 		Sydney Erin Kowal,
 	],
-	Sound&nbsp;Editing and&nbsp;Mixing&nbsp;by: [
+	Post-production Sound&nbsp;by: [
 		John Sanfilippo,
 	],
 	Featuring Songs&nbsp;by: [
@@ -61,6 +61,7 @@ credits: [
 		Discontinuity,
 		virtual_dreams_98,
 		Nicholas Vassos,
+		Jack Omstead,
 		Adam Vriend,
 	],
 	First&nbsp;Assistant Directors: [
@@ -80,9 +81,9 @@ credits: [
 		James P. Hoban,
 		Clair Mooney,
 		Grant Polley,
-		Kiah Raine,
+		Kiah O'Flanagan-Tasse,
 		Chase Reynolds,
-		Nicholas Santamura,
+		Nicholas Santamaura,
 		Kunal Sengupta,
 		Adam Vriend,
 	],
@@ -90,7 +91,7 @@ credits: [
 		Jonathon Gallucci,
 	],
 	Promotional Photographer: [
-		José Andreas Bordas,
+		José Andrés Bordas,
 	],
 	Title Designed&nbsp;by: [
 		Jack Guinane,
@@ -101,6 +102,12 @@ img: your-student-government
 layout: ../../layouts/special/ysg-layout.astro
 ---
 
-Two university students jolkingly run for their school's government, becoming campus celebrities overnight and disrupting the opposing team's serious campaign in the process.
+Two university students jolkingly run for their school's government, becoming campus celebrities
+overnight and disrupting the opposing team's serious campaign in the process.
 
-Theatre kid Suzzy Reeves and computer scientist Iris Powell find themselves out of their element when they decide, as a jolke, to run for their university's government. Unbeknownst to them, Machiavellian Benjamin Weens, pragmatic Madison Spencer, and kindhearted Gunther Trost are running for real as Team WST. With their once secured victory destroyed, WST replaces Gunther with Julian Thacker, a crass and crude party boy, while Suzzy and Iris must learn how to cope with their newfound fame and the election’s effect on their longtime friendship.
+Theatre kid Suzzy Reeves and computer scientist Iris Powell find themselves out of their element
+when they decide, as a jolke, to run for their university's government. Unbeknownst to them,
+Machiavellian Benjamin Weens, pragmatic Madison Spencer, and kindhearted Gunther Trost are running
+for real as Team WST. With their once secured victory destroyed, WST replaces Gunther with Julian
+Thacker, a crass and crude party boy, while Suzzy and Iris must learn how to cope with their
+newfound fame and the election’s effect on their longtime friendship.
