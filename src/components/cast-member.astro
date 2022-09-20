@@ -2,12 +2,14 @@
 const { img, name, role } = Astro.props
 ---
 
-<li>
-	<picture>
-		<source type="image/avif" srcset={`/assets/your-student-government/${img}.avif`}/>
-		<source type="image/webp" srcset={`/assets/your-student-government/${img}.webp`}/>
-		<img src={`/assets/your-student-government/${img}.jpg`} alt={`Headshot of ${name}`}/>
-	</picture>
+<li class={img == undefined ? 'no-img' : ''}>
+	{ (img != undefined) &&
+		<picture>
+			<source type="image/avif" srcset={`/assets/your-student-government/${img}.avif`}/>
+			<source type="image/webp" srcset={`/assets/your-student-government/${img}.webp`}/>
+			<img src={`/assets/your-student-government/${img}.jpg`} alt={`Headshot of ${name}`}/>
+		</picture>
+	}
 	<h2>{name}</h2>
 	<p class="role">{role}</p>
 	<p class="bio">
@@ -22,11 +24,17 @@ const { img, name, role } = Astro.props
 		text-align: center;
 	}
 
+	li.no-img
+	{
+		text-align: start;
+	}
+
 	img
 	{
 		display: block;
 		margin: auto;
-		width: 90%;
+		max-width: 90%;
+		max-height: 50vh;
 		aspect-ratio: 2 / 3;
 		object-fit: cover;
 
@@ -44,12 +52,19 @@ const { img, name, role } = Astro.props
 		font-size: 1.6rem;
 	}
 
+	li.no-img h2, li.no-img p.role
+	{
+		padding: 0 10px;
+	}
+
 	li p.bio
 	{
-		text-align: justify;
+		text-align: start;
 		hyphens: auto;
 		word-wrap: break-word;
   		overflow-wrap: break-word;
+
+		padding: 0 10px;
 	}
 
 	h2
@@ -61,7 +76,8 @@ const { img, name, role } = Astro.props
 
 	li p.role
 	{
-		font-size: 1rem;
+		font-size: 1.3rem;
 		margin: 5px auto 20px;
+		line-height: 1.5;
 	}
 </style>
