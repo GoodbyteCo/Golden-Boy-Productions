@@ -4,8 +4,8 @@ import Header from '../components/small-header.astro'
 import Poster from '../components/poster.astro'
 import Footer from '../components/footer.astro'
 
-// const features = Astro.fetchContent('./features/*.md');
-const shorts = Astro.fetchContent('./shorts/*.md');
+const features = Astro.fetchContent('./features/*.md')
+const shorts = Astro.fetchContent('./shorts/*.md')
 const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.released).valueOf()
 ---
 <!DOCTYPE html>
@@ -30,6 +30,14 @@ const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.releas
 	<body>
 		<Header/>
 		<main>
+			<section>
+				<h2>Features</h2>
+				<div class="features grid">
+				{
+					features.sort(newestFirst).map((film) => (<Poster of={film}/>))
+				}
+				</div>
+			</section>
 			<section>
 				<h2>Short Films</h2>
 				<div class="grid">
@@ -57,6 +65,11 @@ const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.releas
 		padding: 30px;
 	}
 
+	section
+	{
+		margin-bottom: 60px;
+	}
+
 	h2
 	{
 		font-size: 2rem;
@@ -68,5 +81,18 @@ const newestFirst = (a, b) => new Date(b.released).valueOf() - new Date(a.releas
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 		gap: 10px;
+	}
+
+	.features.grid
+	{
+		grid-template-columns: repeat(auto-fit, 300px);
+	}
+
+	@media (max-width: 500px)
+	{
+		.features.grid
+		{
+			grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+		}
 	}
 </style>

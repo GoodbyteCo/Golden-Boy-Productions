@@ -1,16 +1,15 @@
 <div class="video-container">
-	<picture>
-		<source type="image/avif" srcset="/assets/hero/hammer-climb.avif"/>
-		<source type="image/webp" srcset="/assets/hero/hammer-climb.webp"/>
-		<img src="/assets/hero/hammer-climb-static.png" alt="Trailer for Hammer CLimb"/>
-	</picture>
+	<video autoplay muted loop>
+		<source src="/assets/hero/ygs.webm" type="video/webm">
+		<source src="/assets/hero/ygs.mp4" type="video/mp4">
+	</video>
 </div>
 
 <div class="floating-box">
 	<h6>Now Playing:</h6>
-	<p>Hammer Climb</p>
-	<a href="/shorts/hammer-climb" class="cta">
-		Watch short film
+	<p>Your Student Govenrment</p>
+	<a href="/features/your-student-government" class="cta">
+		Watch the film
 	</a>
 </div>
 
@@ -35,11 +34,12 @@
 		padding: 0 18px;
 	}
 
-	img
+	video
 	{
 		width: 100%;
-		aspect-ratio: 1200 / 675;
+		aspect-ratio: 1200 / 635;
 		background: var(--black);
+		opacity: 0.95;
 	}
 
 	.floating-box
