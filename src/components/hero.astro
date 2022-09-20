@@ -1,9 +1,8 @@
 <div class="video-container">
-	<picture>
-		<source type="image/avif" srcset="/assets/hero/ygs.avif"/>
-		<source type="image/webp" srcset="/assets/hero/ygs.webp"/>
-		<img src="/assets/hero/ygs.png" alt="Trailer for Your Student Government"/>
-	</picture>
+	<video autoplay muted loop>
+		<source src="/assets/hero/ygs.webm" type="video/webm">
+		<source src="/assets/hero/ygs.mp4" type="video/mp4">
+	</video>
 </div>
 
 <div class="floating-box">
@@ -35,11 +34,12 @@
 		padding: 0 18px;
 	}
 
-	img
+	video
 	{
 		width: 100%;
-		aspect-ratio: 1200 / 675;
+		aspect-ratio: 1200 / 635;
 		background: var(--black);
+		opacity: 0.95;
 	}
 
 	.floating-box
